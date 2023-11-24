@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body{
+	front-size: BIZ UDPゴシック;
+	background-clor: #fafafa;
+	text-align: center;
+}
+
+h1{
+	font-soze: 32px;
+	color: brue;
+}
+
+h2{
+	font-size: 28px;
+	background-color: brue;
+	color: white;
+}
+
+hr{
+	border: 0;
+	border-top: 1px solid #5ebdad;
+}
+
+.error-msg{
+	color: red;
+}
+
+table{
+	border: 1px solid #5ebdad;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	border-collapse: collapse;
+}
+
+th{
+	border: 1px solid #5ebdad;
+	text-align: center;
+	background-color: #3d9fb3;
+	height: 32px;
+}
+
+td{
+	border: 1px solid #5ebdad;
+	text-align: center;
+	height: 24px;
+}
