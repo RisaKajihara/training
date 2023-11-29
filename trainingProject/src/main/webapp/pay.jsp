@@ -58,6 +58,8 @@
 			session.removeAttribute("pay");
 		} 
 	%>
+	
+	<%@include file = "footer-navi.jsp"%>
 
 </body>
 </html>
