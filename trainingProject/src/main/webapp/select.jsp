@@ -15,10 +15,10 @@
 	<%@include file = "header-navi.jsp"%>
 
 	<%
-		List<Product> listProd;
-		Store store = (Store) session.getAttribute("store");
+	List<model.Product> listProd;
+		model.Store store = (model.Store) session.getAttribute("store");
 		if (store == null) {
-			listProd = new ArrayList<Product>();
+			listProd = new ArrayList<model.Product>();
 		} else {
 			listProd = store.getListProd();
 		}
@@ -33,9 +33,9 @@
 			</tr>
 				
 	<%
-			for (int idx = 0; idx < listProd.size(); idx++) {
-				Product prod = listProd.get(idx);
-	%>
+					for (int idx = 0; idx < listProd.size(); idx++) {
+							model.Product prod = listProd.get(idx);
+					%>
 				<tr>
 					<td>
 						<form action="add-prod-servlet" method="POST">
