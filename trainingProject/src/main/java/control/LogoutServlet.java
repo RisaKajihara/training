@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Operation;
+
 //TODO importできないのでコメントアウト 実装部分のコメントアウトあり
 //import model.Operation;
 
@@ -28,8 +30,8 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		// ログアウト処理
-//		Operation op = new Operation();
-//		op.logoutProc(session);
+		Operation op = new Operation();
+		op.logoutProc(session);
 				
 		// 転送先設定
 		String url = "login.jsp";
