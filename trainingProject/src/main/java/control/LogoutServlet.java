@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import model.Operation;
 
 //TODO importできないのでコメントアウト 実装部分のコメントアウトあり
-//import model.Operation;
+import model.Operation;
 
 /**
  * Servlet implementation class LogoutServlet

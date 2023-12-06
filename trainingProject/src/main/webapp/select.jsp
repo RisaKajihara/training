@@ -4,38 +4,85 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>商品選択</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" >
 </head>
 <body>
+	
 	<%@include file = "header-navi.jsp"%>
-
+	 
 	<%
 	List<model.Product> listProd;
-		model.Store store = (model.Store) session.getAttribute("store");
-		if (store == null) {
-			listProd = new ArrayList<model.Product>();
-		} else {
-			listProd = store.getListProd();
-		}
-		if (listProd.size() > 0) {
+	model.Store store = (model.Store) session.getAttribute("store");
+	String[] images = {"./images/sofa1.jpg", "./images/sofa2.jpg", "./images/sofa3.jpg",
+						"./images/bed1.jpg", "./images/bed2.jpg", "./images/bed3.jpg",
+						"./images/cushion1.jpg", "./images/cushion2.jpg", "./images/cushion3.jpg"};
+	int count = 0; //画像を表示させるため、imagesの引数に渡す変数
+	if (store == null) {
+		listProd = new ArrayList<model.Product>();
+	} else {
+		listProd = store.getListProd();
+	}
+	if (listProd.size() > 0) {
 	%>
-
-			<h2>商品選択</h2>
-
+	
+			<h2>インテリアマーケット</h2>
+			<hr>
+			<form action="add-prod-servlet" method="POST">
+				<%
+					for(int idx = 0; idx < listProd.size()/3; idx++){
+						Product prod = listProd.get(idx);
+				%>
+				<div id="cards">
+				<%
+						for(int num = 0; num < 3; num++){
+				%>
+					<div class="card">
+						<div class="picture"><img alt="" src=<%=images[count++] %> width="300" height="200"></div>
+					    	
+	    				<div class="description">
+      						<p><%=prod.getName() %>　<%=prod.getPriceString() %></p>
+   	  						<p>
+   	  							<input type="hidden" name="idx" value="<%=idx%>">
+   	  							<input type="submit" value="選択">
+   	  						</p>
+    					</div>
+  					</div>
+  				<%
+						}
+  				%>
+  				</div>
+				<br>
+				<%
+					}
+				%>
+		
+			<%
+				}
+			%> 
+			</form>
+			
+			
+			
+<%-- 
 			<table class="select-list">
 			<tr>
 				<th></th><th>商品ID</th><th>商品名</th><th>価格</th>
-			</tr>
-				
+			</tr>--%>
+	
+	<%-- 			
 	<%
-					for (int idx = 0; idx < listProd.size(); idx++) {
-							model.Product prod = listProd.get(idx);
-					%>
+			for (int idx = 0; idx < listProd.size(); idx++) {
+				Product prod = listProd.get(idx);
+	%>
+	--%>
+	
+	<%--
 				<tr>
 					<td>
 						<form action="add-prod-servlet" method="POST">
@@ -49,12 +96,15 @@
 				</tr>			
 	<%
 			}
-	%>
-			</table>
+	%>--%>
+			<%-- </table>--%>
+			
+			
 
+	<%-- 
 	<%
 		}
 	%>
-
+	--%>
 </body>
 </html>

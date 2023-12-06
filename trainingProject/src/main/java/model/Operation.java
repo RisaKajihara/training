@@ -55,19 +55,34 @@ public class Operation {
 	private Store makeStore() {
 
 		// 店舗情報作成
-		Store store = new Store("速水PC販売", new ArrayList<Product>());
+//<<<<<<< HEAD
+//		Store store = new Store("速水PC販売", new ArrayList<Product>());
+//		
+//		// 商品追加
+//		store.add(new Product("A110", "無線マウス", 2000));
+//		store.add(new Product("A120", "薄型キーボード", 3600));
+//		store.add(new Product("A130", "Webカメラ", 3900));
+//		store.add(new Product("A140", "トラックボールマウス", 2900));
+//		store.add(new Product("A150", "USB接続HDD（外付け）", 9800));
+//		store.add(new Product("A160", "2m電源タップ５口", 1900));
+//		store.add(new Product("A170", "USB接続マイク", 3500));
+//		store.add(new Product("A180", "小型ディスプレイ", 11000));
+//		store.add(new Product("A190", "LED照明", 4200));
+//		store.add(new Product("A200", "骨伝導イヤホン", 7800));
+//=======
+		Store store = new Store("インテリアマーケット", new ArrayList<Product>());
 		
 		// 商品追加
-		store.add(new Product("A110", "無線マウス", 2000));
-		store.add(new Product("A120", "薄型キーボード", 3600));
-		store.add(new Product("A130", "Webカメラ", 3900));
-		store.add(new Product("A140", "トラックボールマウス", 2900));
-		store.add(new Product("A150", "USB接続HDD（外付け）", 9800));
-		store.add(new Product("A160", "2m電源タップ５口", 1900));
-		store.add(new Product("A170", "USB接続マイク", 3500));
-		store.add(new Product("A180", "小型ディスプレイ", 11000));
-		store.add(new Product("A190", "LED照明", 4200));
-		store.add(new Product("A200", "骨伝導イヤホン", 7800));
+		store.add(new Product("A110", "ソファ1", 2000));
+		store.add(new Product("A120", "ソファ2", 3600));
+		store.add(new Product("A130", "ソファ3", 3900));
+		store.add(new Product("A140", "ベッド1", 2900));
+		store.add(new Product("A150", "ベッド2", 9800));
+		store.add(new Product("A160", "ベッド3", 1900));
+		store.add(new Product("A170", "クッション1", 3500));
+		store.add(new Product("A180", "クッション2", 11000));
+		store.add(new Product("A190", "クッション3", 4200));
+//>>>>>>> refs/remotes/origin/NewNagai
 		
 		return store;
 	}

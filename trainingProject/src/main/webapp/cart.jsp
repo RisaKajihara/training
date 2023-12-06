@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<%include file = "header-navi.jsp" %>
+	<%@ include file = "header-navi.jsp" %>
 	<h2>カート内一覧</h2>
 	<%
 		List<Product> listProd;

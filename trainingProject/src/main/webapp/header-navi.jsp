@@ -5,8 +5,8 @@
 
 	<%--店舗名・ユーザー名表示 --%>
 	<%
-	model.Store storehdr = (model.Store) session.getAttribute("store");
-		model.Cart carthdr = (model.Cart) 	session.getAttribute("cart");
+		Store storehdr = (Store) session.getAttribute("store");
+		Cart carthdr = (Cart) 	session.getAttribute("cart");
 		if(storeHdr = null) || cartHdr = null ){
 			request.setAttribute("errorMsg","再度ログインをお願いします。");
 			request.getRequestDispacther("login.jsp").forward(request.response);
