@@ -4,7 +4,6 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,17 +20,12 @@
 
 	<%
 		List<Product> listProd;
-		// セッションスコープから属性名payを取得してCart型にキャストして変数に代入する。
 		Cart payData = (Cart) session.getAttribute("pay");
-		// PayDataがnullの場合
 		if (payData == null) {
-			// ArrayListをインスタンス化して代入（初期上タイのリストをlistProdに代入）
 			listProd = new ArrayList<Product>();
-		// 上記以外の場合清算済みリストを取得してlistProdに代入
 		} else {
 			listProd = payData.getListProd();
 		}
-		// listProdの要素数が０より大きい場合
 		if (listProd.size() > 0) {
 	%>
 			<table class="pay-list">
@@ -54,8 +48,7 @@
 			<p>合計：<%=payData.getTotalPriceString() %> になります。</p>
 
 	<%
-			// 精算済情報の削除
-			session.removeAttribute("pay");
+			session.removeAttribute("pay");			// 精算済情報の削除
 		} 
 	%>
 
