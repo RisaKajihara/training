@@ -16,7 +16,7 @@
 	<%--
 	<%@include file = "header-navi.jsp"%>
 	 --%>
-
+<%-- --%>
 	<%
 	List<model.Product> listProd;
 	model.Store store = (model.Store) session.getAttribute("store");
