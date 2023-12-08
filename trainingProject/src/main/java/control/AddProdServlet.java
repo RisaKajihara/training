@@ -27,6 +27,8 @@ public class AddProdServlet extends HttpServlet {
 		// パラメータ取得
 		request.setCharacterEncoding("UTF-8");
 		int count = Integer.parseInt(request.getParameter("count"));
+		//String count = request.getParameter("count");
+		System.out.println("count : " + count);
 
 		// セッションオブジェクト取得
 		HttpSession session = request.getSession();

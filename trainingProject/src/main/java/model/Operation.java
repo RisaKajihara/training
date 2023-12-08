@@ -102,7 +102,7 @@ public class Operation {
 	 * @param idx 商品一覧の選択した商品のidx (セッション：store内)
 	 * @param session セッションオブジェクト
 	 */
-	public void addProd(int idx, HttpSession session) {
+	public void addProd(int count, HttpSession session) {
 		
 		// 店舗情報・カート情報の取得（セッションより）
 		Store store = (Store) session.getAttribute("store");
@@ -110,7 +110,7 @@ public class Operation {
 
 		if ((store != null) && (cart != null)) {
 			// カートに指定の商品を追加
-			cart.add(store.getListProd().get(idx));
+			cart.add(store.getListProd().get(count));
 
 			// セッションに再度格納
 			session.setAttribute("cart", cart);
