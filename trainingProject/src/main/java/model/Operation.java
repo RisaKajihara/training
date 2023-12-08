@@ -73,15 +73,15 @@ public class Operation {
 		Store store = new Store("インテリアマーケット", new ArrayList<Product>());
 		
 		// 商品追加
-		store.add(new Product("A110", "ソファ1", 2000));
-		store.add(new Product("A120", "ソファ2", 3600));
-		store.add(new Product("A130", "ソファ3", 3900));
-		store.add(new Product("A140", "ベッド1", 2900));
-		store.add(new Product("A150", "ベッド2", 9800));
-		store.add(new Product("A160", "ベッド3", 1900));
-		store.add(new Product("A170", "クッション1", 3500));
-		store.add(new Product("A180", "クッション2", 11000));
-		store.add(new Product("A190", "クッション3", 4200));
+		store.add(new Product("A110", "ソファ1", 19990));
+		store.add(new Product("A120", "ソファ2", 24490));
+		store.add(new Product("A130", "ソファ3", 26990));
+		store.add(new Product("A140", "ベッド1", 19990));
+		store.add(new Product("A150", "ベッド2", 38990));
+		store.add(new Product("A160", "ベッド3", 29990));
+		store.add(new Product("A170", "クッション1", 2580));
+		store.add(new Product("A180", "クッション2", 3180));
+		store.add(new Product("A190", "クッション3", 2380));
 //>>>>>>> refs/remotes/origin/NewNagai
 		
 		return store;
