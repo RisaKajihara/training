@@ -36,24 +36,26 @@
 			<form action="add-prod-servlet" method="POST">
 				<%
 					for(int idx = 0; idx < listProd.size()/3; idx++){
-						Product prod = listProd.get(idx);
+						
 				%>
 				<div id="cards">
 				<%
 						for(int num = 0; num < 3; num++){
+							Product prod = listProd.get(count);
 				%>
 					<div class="card">
-						<div class="picture"><img alt="" src=<%=images[count++] %> width="300" height="200"></div>
+						<div class="picture"><img alt="" src=<%=images[count] %> width="300" height="200"></div>
 					    	
 	    				<div class="description">
-      						<p><%=prod.getName() %>　<%=prod.getPriceString() %></p>
+      						<p><%=prod.getName() %>　<%=prod.getPriceString() %> <%=count %></p>
    	  						<p>
-   	  							<input type="hidden" name="idx" value="<%=idx%>">
+   	  							<input type="hidden" name="count" value="<%=count%>">
    	  							<input type="submit" value="選択">
    	  						</p>
     					</div>
   					</div>
   				<%
+  						count++;
 						}
   				%>
   				</div>

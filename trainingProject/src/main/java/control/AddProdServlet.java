@@ -26,14 +26,15 @@ public class AddProdServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// パラメータ取得
 		request.setCharacterEncoding("UTF-8");
-		int idx = Integer.parseInt(request.getParameter("idx"));
+		int count = Integer.parseInt(request.getParameter("count"));
 
 		// セッションオブジェクト取得
 		HttpSession session = request.getSession();
+		session.setAttribute("count", count);
 		
 		// カートへの商品追加処理
 		Operation op = new Operation();
-		op.addProd(idx, session);
+		op.addProd(count, session);
 
 		// 転送先設定
 		String url = "cart.jsp";
