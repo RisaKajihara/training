@@ -11,7 +11,7 @@
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		} else {
 	%>
-			<h1><%=storeHdr.getName() %></h1>
+			<h1 style="color: #572100"><%=storeHdr.getName() %></h1>
 			<hr>
 			ユーザID：<%=cartHdr.getUserId() %>
 			<hr>
