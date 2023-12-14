@@ -15,6 +15,11 @@ h2{
 	color: #572100;
 }
 
+h3{
+	font-size: 19px;
+	color: #572100;
+}
+
 p{
 	margin: 5px;
 }
@@ -23,6 +28,23 @@ hr{
 	border: 0;
 	border-top: 1px solid #572100;
 	margin: 50px;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: separate;
+    border-spacing: 0px 25px;
+	width: 30%;
+	hight: 100%;
+}
+
+tr{
+	backgroud-color: white;
+}
+
+td{
+	text-align: center;
 }
 
 #cards {
