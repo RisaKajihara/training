@@ -3,7 +3,9 @@
 <%@ page import="model.Product" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.LinkedHashMap" %>
+<%@ page import="java.util.Collection" %>
 
 <!DOCTYPE html>
 <html>
@@ -19,9 +21,23 @@
 	<%
 	List<model.Product> listProd;
 	model.Store store = (model.Store) session.getAttribute("store");
-	String[] images = {"./images/sofa1.jpg", "./images/sofa2.jpg", "./images/sofa3.jpg",
-						"./images/bed1.jpg", "./images/bed2.jpg", "./images/bed3.jpg",
-						"./images/cushion1.jpg", "./images/cushion2.jpg", "./images/cushion3.jpg"};
+	
+	//Map(商品ID, 商品画像のパス)
+	//格納した順に値を取得したいため、LinkedHashMap
+	Map<String, String> map = new LinkedHashMap<String, String>(){
+		{
+			put("A110", "./images/sofa1.jpg"); put("A120", "./images/sofa2.jpg"); put("A130", "./images/sofa3.jpg");
+			put("A140", "./images/bed1.jpg"); put("A150", "./images/bed2.jpg"); put("A160", "./images/bed3.jpg");
+			put("A170", "./images/cushion1.jpg"); put("A180", "./images/cushion2.jpg"); put("A190", "./images/cushion3.jpg");
+		}
+	};
+	//mapから値(商品画像のパス)を取り出す
+	List<String> images = new ArrayList<>();
+	for(String val : map.values()){
+		images.add(val);
+	}
+	session.setAttribute("map", map);
+	
 	int count = 0; //画像を表示させるため、imagesの引数に渡す変数
 	if (store == null) {
 		listProd = new ArrayList<model.Product>();
@@ -30,9 +46,6 @@
 	}
 	if (listProd.size() > 0) {
 	%>
-	
-			<h2>インテリアマーケット</h2>
-			<hr>
 			<form action="add-prod-servlet" method="POST">
 				<%
 					for(int idx = 0; idx < listProd.size()/3; idx++){
@@ -44,10 +57,10 @@
 							Product prod = listProd.get(count);
 				%>
 					<div class="card">
-						<div class="picture"><img alt="" src=<%=images[count] %> width="300" height="200"></div>
+						<div class="picture"><img alt="" src=<%=images.get(count) %> width="300" height="200"></div>
 					    	
 	    				<div class="description">
-      						<p><%=prod.getName() %>　<%=prod.getPriceString() %> <%=count %></p>
+      						<p><%=prod.getName() %>　<%=prod.getPriceString() %></p>
    	  						<p>
    	  							<input type="hidden" name="count" value=<%=count%>><%--count送信出来てるか確認 --%>
    	  							<input type="submit" value="選択">
