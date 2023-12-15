@@ -19,8 +19,6 @@
 	<h2>カート内一覧</h2>
 
 	<%
-		//model.Store store = (model.Store) session.getAttribute("store");
-		//control.AddProdServlet count = (control.AddProdServlet) session.getAttribute("count");
 		int count = (int)session.getAttribute("count");
 		List<Product> listProd;
 		Cart cart = (Cart) session.getAttribute("cart");

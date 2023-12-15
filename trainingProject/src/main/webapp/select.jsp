@@ -49,7 +49,7 @@
 	    				<div class="description">
       						<p><%=prod.getName() %>　<%=prod.getPriceString() %> <%=count %></p>
    	  						<p>
-   	  							<input type="hidden" name="count" value="<%=count%>">
+   	  							<input type="hidden" name="count" value=<%=count%>><%--count送信出来てるか確認 --%>
    	  							<input type="submit" value="選択">
    	  						</p>
     					</div>
