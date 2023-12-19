@@ -43,6 +43,6 @@
 			</tbody>
 		</table>
 	</div>
-	<%@include file="footer-navi.jsp"%>
+	<%@include file="footer.jsp"%>
 </body>
 </html>

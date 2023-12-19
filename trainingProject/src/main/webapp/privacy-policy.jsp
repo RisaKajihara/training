@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>プライバシーポリシー</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+	<%@include file="header-navi.jsp"%>
     <h1>プライバシーポリシー</h1>
 
     <p>当ウェブサイトでは、ユーザーから提供された個人情報を大切に扱います。</p>
@@ -25,6 +26,6 @@
         <li>サービス提供のため</li>
         <li>お問い合わせへの対応</li>
     </ul>
-
+	<%@include file="footer.jsp"%>
 </body>
 </html>
