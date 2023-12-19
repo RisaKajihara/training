@@ -12,10 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import model.Operation;
 
-/**
- * 精算するサーブレット
- * @author M.Takahashi
- */
+
 @WebServlet("/pay-servlet")
 public class PayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

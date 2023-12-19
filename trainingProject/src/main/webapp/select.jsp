@@ -46,7 +46,7 @@
 	}
 	if (listProd.size() > 0) {
 	%>
-			<form action="add-prod-servlet" method="POST">
+			
 				<%
 					for(int idx = 0; idx < listProd.size()/3; idx++){
 						
@@ -56,6 +56,7 @@
 						for(int num = 0; num < 3; num++){
 							Product prod = listProd.get(count);
 				%>
+				<form action="add-prod-servlet" method="POST">
 					<div class="card">
 						<div class="picture"><img alt="" src=<%=images.get(count) %> width="300" height="200"></div>
 					    	
@@ -67,6 +68,7 @@
    	  						</p>
     					</div>
   					</div>
+  				</form>
   				<%
   						count++;
 						}
@@ -80,46 +82,6 @@
 			<%
 				}
 			%> 
-			</form>
-			
-			
-			
-<%-- 
-			<table class="select-list">
-			<tr>
-				<th></th><th>商品ID</th><th>商品名</th><th>価格</th>
-			</tr>--%>
-	
-	<%-- 			
-	<%
-			for (int idx = 0; idx < listProd.size(); idx++) {
-				Product prod = listProd.get(idx);
-	%>
-	--%>
-	
-	<%--
-				<tr>
-					<td>
-						<form action="add-prod-servlet" method="POST">
-							<input type="hidden" name="idx" value="<%=idx%>">
-							<input type="submit" value="選択">
-						</form>
-					</td>
-					<td><%=prod.getId() %></td>
-					<td><%=prod.getName() %></td>
-					<td><%=prod.getPriceString() %></td>
-				</tr>			
-	<%
-			}
-	%>--%>
-			<%-- </table>--%>
-			
-			
-
-	<%-- 
-	<%
-		}
-	%>
-	--%>
+		
 </body>
 </html>

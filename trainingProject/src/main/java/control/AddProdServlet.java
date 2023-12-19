@@ -12,10 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import model.Operation;
 
-/**
- * カートに商品を追加するサーブレット
- * @author M.Takahashi
- */
+
 @WebServlet("/add-prod-servlet")
 public class AddProdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

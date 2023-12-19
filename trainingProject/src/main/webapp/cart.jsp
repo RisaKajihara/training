@@ -46,7 +46,7 @@
 	%>
 				<tr style="backgroud-color:white">
 					<td><img alt="" src=<%=map.get(prod.getId()) %> width="150" height="105"></td>
-					<td><%=prod.getId() %></td>
+					
 					<td><%=prod.getName() %></td>
 					<td><%=prod.getPriceString() %></td>
 					

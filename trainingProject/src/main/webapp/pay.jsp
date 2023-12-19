@@ -28,23 +28,7 @@
 		}
 		if (listProd.size() > 0) {
 	%>
-			<table class="pay-list">
-			<tr>
-				<th>商品ID</th><th>商品名</th><th>価格</th>
-			</tr>
-	<%
-			for (Product prod : listProd) {
-	%>
-				<tr>
-					<td><%=prod.getId() %></td>
-					<td><%=prod.getName() %></td>
-					<td><%=prod.getPriceString() %></td>
-				</tr>			
-	<%
-			}
-	%>
-			</table>
-			<br>
+
 			<p>合計：<%=payData.getTotalPriceString() %> になります。</p>
 
 	<%

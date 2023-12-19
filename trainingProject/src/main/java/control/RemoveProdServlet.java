@@ -12,10 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import model.Operation;
 
-/**
- * カートから商品を削除するサーブレット
- * @author M.Takahashi
- */
+
 @WebServlet("/remove-prod-servlet")
 public class RemoveProdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

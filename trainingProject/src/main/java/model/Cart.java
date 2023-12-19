@@ -2,10 +2,7 @@ package model;
 
 import java.util.List;
 
-/**
- * カート情報を表すクラス
- * @author M.Takahashi
- */
+
 public class Cart {
 	/******** フィールド ******************************************/
 	/**

@@ -1,9 +1,5 @@
 package model;
 
-/**
- * 商品クラス
- * @author M.Takahashi
- */
 public class Product {
 	/******** フィールド ******************************************/
 	/**
